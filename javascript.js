@@ -35,3 +35,18 @@ document.querySelectorAll('button').forEach(button => {
         }
     });
 });
+function calculateScientific(operation) {
+    let display = document.querySelector('.display');
+    let value = parseFloat(display.innerText);
+
+    switch(operation) {
+        case 'sin': display.innerText = Math.sin(value * Math.PI / 180).toFixed(4); break;
+        case 'cos': display.innerText = Math.cos(value * Math.PI / 180).toFixed(4); break;
+        case 'tan': display.innerText = Math.tan(value * Math.PI / 180).toFixed(4); break;
+        case 'log': display.innerText = Math.log10(value).toFixed(4); break;
+        case 'square': display.innerText = Math.pow(value, 2); break;
+        case 'sqrt': display.innerText = Math.sqrt(value).toFixed(4); break;
+        case 'pi': display.innerText = Math.PI.toFixed(4); break;
+        case 'exp': display.innerText = Math.E.toFixed(4); break;
+    }
+}
